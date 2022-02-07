@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <%- include ('../../partials/favicon.ejs') -%>
+        <title>Registrar Usuário</title>
+</head>
+
+<body>
+        <hr>
+        <div class="container">
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h2>Login de usuario</h2>
+                </div>
+                <div class="card-body">
+                    <form method='POST' action="/authenticate">
+                        <input name='email' type='email' placeholder='email@exemplo.com' class="form-control">
+                        <br>
+                        <input name='password' type='password' placeholder='Senha' class="form-control">
+                        <br>
+                        <button class='btn btn-success btn-block'>Logar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
+
+
+<%- include ('../../partials/footer.ejs') -%>

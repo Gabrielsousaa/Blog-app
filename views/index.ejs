@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <%- include('partials/favicon.ejs'); -%>
+        <title>Home</title>
+        <%- include('partials/homenavbar.ejs'); -%>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Bem-vindo</h1>
+            <p class="lead">Este é blog para discurtir e esclarecer ideias sobre qualquer coisa</p>
+            <hr class="my-4">
+            <p>Descrição detalhada clicando abaixo!</p>
+            <a href="" class="btn btn-primary">Leia mais</a>
+        </div>
+        <hr>
+        <% articles.forEach(article=>{ %>
+            <div class="card">
+                <div class="card-header">
+                    <h2>
+                        <%= article.title %>
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <a href="/<%= article.slug %>" class="btn btn-success">
+                        Ler Artigo
+                    </a>
+                </div>
+            </div>
+            <br>
+            <% }) %>
+                <div class="row">
+                    <div class="col col-12">
+                        <a style="float:right" href="/articles/page/2"> Proxima pagina >>></a>
+                    </div>
+                </div>
+                <hr>
+    </div>
+    <hr>
+
+</body>
+
+<%- include('partials/footer.ejs'); -%>

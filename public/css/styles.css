@@ -1,0 +1,13 @@
+body {
+    background-color: #eceff1;
+}
+
+img {
+    padding-left: 0;
+    height: 50px;
+    margin: auto;
+}
+
+#formulario{
+    margin-top: 5vh;
+}

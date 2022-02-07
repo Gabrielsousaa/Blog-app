@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <%- include ('../../partials/favicon.ejs') -%>
+        <title>Usuários</title>
+</head>
+
+<body>
+    <%- include ('../../partials/navbar.ejs') -%>
+        <div class="container">
+            <hr>
+            <h2>Usuario</h2>
+            <a href='/admin/users/create' class="btn btn-success">Criar um novo usuario</a>
+            <hr>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>email</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <% users.forEach(user=> { %>
+
+                        <tr>
+                            <th>
+                                <%= user.id %>
+                            </th>
+                            <th>
+                                <%= user.email %>
+                            </th>
+                        </tr>
+
+                        <% }) %>
+                </tbody>
+            </table>
+        </div>
+
+</body>
+
+</html>
+
+
+<%- include ('../../partials/footer.ejs') -%>
